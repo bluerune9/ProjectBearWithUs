@@ -7,14 +7,18 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public float rotationSpeed;
     public float jumpSpeed;
+    public float jumpButtonGracePeriod; //grace period so jump functions even if player presses button too early/too late (just enough)
 
     private CharacterController characterController;
     private float ySpeed;
     private float originalStepOffset;
+    private float? lastGroundedTime; //question mark indicates that this field is nulliable. either float or null value.
+    private float? jumpbuttonPressedTime;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         characterController = GetComponent<CharacterController>();
         originalStepOffset = characterController.stepOffset;  //to fix the stepoffset glitch
     }
@@ -40,11 +44,27 @@ public class PlayerMovement : MonoBehaviour
         
         if (characterController.isGrounded)
         {
+            lastGroundedTime = Time.time;
+        }
+        
+        if (Input.GetButtonDown("Jump"))
+        {
+            jumpbuttonPressedTime = Time.time;
+        }
+
+        if (Time.time - lastGroundedTime <= jumpButtonGracePeriod) //instead of checking if the character is grounded now we check if it was within the grace period
+        {
             characterController.stepOffset = originalStepOffset; 
             ySpeed = -0.5f; //to make sure our character jumps every time its grounded bc isGrounded function is a bit hit or miss
-            if (Input.GetButtonDown ("Jump"))
+           
+            
+            if (Time.time - jumpbuttonPressedTime <= jumpButtonGracePeriod) // same logic for the button is pressed check as above
             {
                 ySpeed = jumpSpeed;
+
+                //resetting nullible fields when character jumps
+                jumpbuttonPressedTime = null;
+                lastGroundedTime = null;
             }
         }
 
@@ -52,8 +72,8 @@ public class PlayerMovement : MonoBehaviour
         {
             characterController.stepOffset = 0;
         }
-        //ecstracting our calculation and assigning it to a variable
-        Vector3 velocity = movementDirection * magnitude;
+        //extracting our calculation and assigning it to a variable
+        Vector3 velocity = movementDirection * speed * magnitude;
         velocity.y = ySpeed;
 
         characterController.Move(velocity * Time.deltaTime);
@@ -63,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
         //to check if a character is moving we check if movement direction is not zero
         if (movementDirection != Vector3.zero)
         {
+            
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up); //stores rotation specifically
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
