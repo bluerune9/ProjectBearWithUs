@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class SceneManagement : MonoBehaviour
 {
     public static bool isGamePaused = false;
-    [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject pauseMenu; 
+    [SerializeField] GameObject letterPanel;
     public void ExitGame()
     {
         Application.Quit();
@@ -44,6 +45,13 @@ public class SceneManagement : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
+        Time.timeScale = 1.0f;
+        isGamePaused = false;
+    }
+
+    public void CloseLetter()
+    {
+        letterPanel.SetActive(false);
         Time.timeScale = 1.0f;
         isGamePaused = false;
     }
