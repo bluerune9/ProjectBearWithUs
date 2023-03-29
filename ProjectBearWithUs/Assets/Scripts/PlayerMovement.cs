@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
-    public float rotationSpeed;
-    public float jumpSpeed;
-    public float jumpButtonGracePeriod; //grace period so jump functions even if player presses button too early/too late (just enough)
+    [SerializeField]
+    private float speed;
+    
+    [SerializeField]
+    private float rotationSpeed;
+    
+    [SerializeField]
+    private float jumpSpeed;
+
+    [SerializeField]
+    private float jumpButtonGracePeriod; //grace period so jump functions even if player presses button too early/too late (just enough)
+
+    [SerializeField]
+    private Transform cameraTransform;
 
     private Animator animator;
     private CharacterController characterController;
@@ -37,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
         //**keeping movement consistent through both singular + diagonal direction 
         float magnitude = movementDirection.magnitude;
         magnitude = Mathf.Clamp01(magnitude);
+        
+        movementDirection = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * movementDirection;
         movementDirection.Normalize();
 
         //**adjusting for gravity
@@ -94,4 +106,5 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsMoving", false);
         }
     }
+    
 }
