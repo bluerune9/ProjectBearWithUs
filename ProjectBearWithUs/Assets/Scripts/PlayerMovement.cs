@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpSpeed;
     public float jumpButtonGracePeriod; //grace period so jump functions even if player presses button too early/too late (just enough)
 
+    private Animator animator;
     private CharacterController characterController;
     private float ySpeed;
     private float originalStepOffset;
@@ -18,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         originalStepOffset = characterController.stepOffset;  //to fix the stepoffset glitch
     }
@@ -83,10 +84,14 @@ public class PlayerMovement : MonoBehaviour
         //to check if a character is moving we check if movement direction is not zero
         if (movementDirection != Vector3.zero)
         {
-            
+            animator.SetBool("IsMoving", true);
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up); //stores rotation specifically
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false);
         }
     }
 }
