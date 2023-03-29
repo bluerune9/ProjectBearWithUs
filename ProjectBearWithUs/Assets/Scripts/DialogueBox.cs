@@ -7,11 +7,12 @@ using UnityEngine.UI;
 public class DialogueBox : MonoBehaviour
 {
     public Text dialogueText;
+    [TextArea(3, 10)]
     public string[] dialogues;
     bool inPresence;
     int currentLine = 0;
 
-
+    
 
     //event that happens on trigger
     private void OnTriggerEnter(Collider other)
