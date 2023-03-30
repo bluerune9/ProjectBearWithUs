@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [ExecuteInEditMode]
-public class TurnBack : MonoBehaviour {
+public class TextCollider : MonoBehaviour {
 
 	[Space(10)]
 	[Header("Toggle for the gui on off")]
