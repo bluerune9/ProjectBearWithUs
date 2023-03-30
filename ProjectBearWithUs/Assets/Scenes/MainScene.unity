@@ -1867,7 +1867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 4
+  m_BindingMode: 5
   m_FollowOffset: {x: 0, y: 7, z: -20}
   m_XDamping: 1
   m_YDamping: 1
@@ -1888,7 +1888,7 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
-    Value: 148.82721
+    Value: 0
     m_SpeedMode: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.1
@@ -5896,7 +5896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 4
+  m_BindingMode: 5
   m_FollowOffset: {x: 0, y: 7, z: -20}
   m_XDamping: 1
   m_YDamping: 1
@@ -5917,7 +5917,7 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
-    Value: 148.82721
+    Value: 0
     m_SpeedMode: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.1
@@ -8461,7 +8461,7 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
-    Value: 148.82721
+    Value: 0
     m_SpeedMode: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.1
@@ -8488,7 +8488,7 @@ MonoBehaviour:
     m_RecenteringTime: 2
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
-  m_BindingMode: 4
+  m_BindingMode: 5
   m_SplineCurvature: 0.2
   m_Orbits:
   - m_Height: 10
@@ -8510,7 +8510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790818946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.247585, y: 47.899998, z: -53.2878}
+  m_LocalPosition: {x: 59.31526, y: 47.899998, z: -79.682755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1372093144}
@@ -9832,7 +9832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 4
+  m_BindingMode: 5
   m_FollowOffset: {x: 0, y: 7, z: -20}
   m_XDamping: 1
   m_YDamping: 1
@@ -9853,7 +9853,7 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
-    Value: 148.82721
+    Value: 0
     m_SpeedMode: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.1
@@ -12209,21 +12209,32 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 565677a746a6d114d9ecaa69bd28c6b2, type: 3}
-    m_FontSize: 28
+    m_Font: {fileID: 12800000, guid: 16122f00a62a345418374a8faadbf2c7, type: 3}
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: New Text ndjsandkjnsajknjkn dnjsandksja ndjska dnsjkandsjkadnsjkandksjandkjsa
-    jdnsakjdnsjkandjksandjksandjksandjksandkjsankj dnsjakdnsjkadnsajkdnsakjdnsajkdnsjkadnsajkdnsjkadnsjakdnsajkdnsajkdnsakjndjksa
-    ndjskadnsjakdnsakjdnsjkadnjskadnsjkadnskaj
+    m_LineSpacing: 0.5
+  m_Text: "My dearest Theo,\r\n\r\nI hoped I wouldn\u2019t have to write this letter,
+    butiIf this letter is in your hands, then I am gone, and whatever the funeral
+    rites were to my death, I do not care for it. I do, have a little request though,
+    if you'd like to do your ol\u2019 grandpa one last favour?\n\r\nIt\u2019s been
+    so long since I was up there last, in our old cabin up on the mountain. Do you
+    remember it?  You were so young, I doubt it\u2026 I miss the air, I miss the
+    people.. even now in my hospital bed I dream of the sight of the setting sun.
+    I wish I could\u2019ve been there.. One last time. \r\n\r\nWould you do me the
+    honour?  Would you take me up there one last time, and scatter my ashes to the
+    sea? \r\nI left the keys with m\u0334\u034C\u0308r\u0336\u0344\u033B \u0337\u0312\u0344w\u0338\u0342\u030Bo\u0337\u034C\u035Bl\u0337\u030A\u0352f\u0338\u0306\u030Ce\u0338\u0310\u0303,
+    our old neighbor. I can taste it, I think, the salt in the air, the breeze in
+    my hair. Can you hear the birds singing? \r\n\r\nWe will meet again one day,
+    my boy.\r\nI hope you live an eventful life, and tell me all about it when we
+    do.\n\r\nLove,\r\nGrandpa "
 --- !u!222 &1082311862
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15030,7 +15041,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372093142}
-  m_LocalRotation: {x: 0.045514133, y: 0.9491186, z: -0.16244969, w: 0.2659181}
+  m_LocalRotation: {x: 0.14335191, y: -0.510304, z: 0.086723976, w: 0.8435159}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -18084,8 +18095,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687274207}
-  m_LocalRotation: {x: 0.040669683, y: 0.9519165, z: -0.14515883, w: 0.266702}
-  m_LocalPosition: {x: 35.093254, y: 45.31638, z: -59.699528}
+  m_LocalRotation: {x: 0.12798506, y: -0.511797, z: 0.07742745, w: 0.84598386}
+  m_LocalPosition: {x: 59.31526, y: 47.899998, z: -79.682755}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -19494,7 +19505,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833081833}
-  m_LocalRotation: {x: 0.03582463, y: 0.9543932, z: -0.12786578, w: 0.26739588}
+  m_LocalRotation: {x: 0.11261663, y: -0.51311743, z: 0.068129964, w: 0.84816647}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19568,7 +19579,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858837232}
-  m_LocalRotation: {x: 0.040669672, y: 0.9519165, z: -0.1451588, w: 0.266702}
+  m_LocalRotation: {x: 0.12798506, y: -0.511797, z: 0.077427454, w: 0.84598386}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
