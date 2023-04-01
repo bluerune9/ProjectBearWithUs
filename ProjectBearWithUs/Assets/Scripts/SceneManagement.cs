@@ -8,6 +8,9 @@ public class SceneManagement : MonoBehaviour
     public static bool isGamePaused = false;
     [SerializeField] GameObject pauseMenu; 
     [SerializeField] GameObject letterPanel;
+    [SerializeField] GameObject creditsPanel;
+    [SerializeField] GameObject controlsPanel;
+    public List<GameObject> buttonsStartMenu = new List<GameObject>();
     public void ExitGame()
     {
         Application.Quit();
@@ -62,4 +65,27 @@ public class SceneManagement : MonoBehaviour
         Time.timeScale = 0f;
         isGamePaused = true;
     }
+
+
+    public void OpenCredits()
+    {
+        creditsPanel.SetActive(true);
+
+        for (int i = 0; i < buttonsStartMenu.Count; i++)
+        {
+            buttonsStartMenu[i].SetActive(false);
+        }
+        
+    }
+
+    public void CloseCredits()
+    {
+        creditsPanel.SetActive(false);
+
+        for (int i = 0; i < buttonsStartMenu.Count; i++)
+        {
+            buttonsStartMenu[i].SetActive(true);
+        }
+    }
+
 }
