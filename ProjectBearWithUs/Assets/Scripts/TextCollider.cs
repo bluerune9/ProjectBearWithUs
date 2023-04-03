@@ -14,6 +14,7 @@ public class TextCollider : MonoBehaviour {
 	[Space(10)]
 	[Header("The text to Display on Trigger")]
 	[Tooltip("To edit the look of the text Go to Assets > Create > GUIskin. Add the new Guiskin to the Custom Skin proptery. If you select the GUIskin in your project tab you can now adjust the Label section to change this text")]
+	[TextArea(3, 10)]
 	public string Text = "Turn Back";
 
 	[Tooltip("This is the window Box's size. It will be mid screen. Add or reduce the X and Y to move the box in Pixels. ")]
